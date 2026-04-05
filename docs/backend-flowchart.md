@@ -6,16 +6,16 @@ This document shows how requests move through the backend and how files are orga
 
 ```mermaid
 flowchart TD
-    A[Client / Frontend] --> B[src/server.js]
-    B --> C[src/app.js]
-    C --> D[Express JSON + URL-encoded parsers]
-    C --> E[/api router: src/routes/index.js]
+    A["Client / Frontend"] --> B["src/server.js"]
+    B --> C["src/app.js"]
+    C --> D["Express JSON + URL-encoded parsers"]
+    C --> E["/api router: src/routes/index.js"]
 
-    E --> E1[GET /health public]
-    E --> E2[/auth]
-    E --> E3[/users]
-    E --> E4[/finance]
-    E --> E5[/dashboard]
+    E --> E1["GET /health public"]
+    E --> E2["/auth"]
+    E --> E3["/users"]
+    E --> E4["/finance"]
+    E --> E5["/dashboard"]
 
     E2 --> V1[validate.middleware.js]
     V1 --> AC[auth.controller.js]
