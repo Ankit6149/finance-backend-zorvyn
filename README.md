@@ -46,6 +46,7 @@ sql/
 Architecture flowchart and file map:
 
 - `docs/backend-flowchart.md`
+- `docs/api-reference.md` (complete endpoint documentation)
 
 ## Setup
 
